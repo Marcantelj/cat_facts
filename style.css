@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f9; /* Soft background so the container pops */
+    font-family: sans-serif; /* Cleaner modern text */
+}
+
+.container {
+    display: flex;
+    border: 5px solid black; /* Slightly thinner for a cleaner look */
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px; /* FIX: Stops the container from bouncing in size */
+    text-align: center; /* Centers the text inside the paragraph */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+h1, p {
+    flex: 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+p {
+    color: #555; /* Slightly softer black for readability */
+    line-height: 1.5;
+}
+
+#fetch-btn {
+    padding: 10px 20px; /* Slightly bigger target for better UX */
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Smoothly transitions the hover effect */
+}
+
+#fetch-btn:hover {
+    background-color: aqua;
+}
+
+/* NEW: Automatically styles the button when JS sets disabled = true */
+#fetch-btn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border-color: #999999;
+    cursor: not-allowed; /* Turns cursor into a generic "no" symbol */
+}
